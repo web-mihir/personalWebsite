@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  // --color-body: hsl(250, 60%, 99%);
+  --color-body: hsl(0deg 0% 98%);
+  --color-secondary: hsl(208, 7%, 46%);
+  --color-card-body: hsl(0, 0%, 95%);
+  --color-card-secondary: linear-gradient(145deg, #eeeeee, #cecece);
+  --color-card-secondary-alt: hsl(0, 0%, 81%);
+
+  --color-red: #d10000;
+  --color_link: #6e57e0;
+  --color_primary: #347979;
+  --color_testimonials: #dadada6c;
+
+  --color_text_primary: hsl(250, 11%, 7%);
+  --color_text_title: hsl(250, 8%, 25%);
+  --color_text_secondary: hsl(250, 8%, 35%);
+
+  --color_section_title: hsl(215, 6%, 14%);
+  --color_section_title_span: #587093;
+
+  --svg-path-fill: #ecf3ff;
+  --color-transparent: #83a2f881;
+  --color-input: hsl(0deg 0% 88%);
+  --input-inner-shadow: 1px 4px 2px -3px rgba(211, 211, 211, 0.7) inset,
+    -1px -3px 3px -2px rgba(255, 255, 255, 0.705) inset;
+  --color-text-input: hsl(0, 0%, 36%);
+  --color-header-shadow: #00776b;
+
+  --color_faqitems: hsl(0, 0%, 95%);
+}
+
+html[data-theme="dark"] {
+  // --color-body: hsl(214, 10%, 14%);
+  --color-body: #222222; //#1f2023; //hsl(0, 0%, 7%);    //#393e46;
+  --color-secondary: hsl(0, 0%, 96%);
+  --color-card-body: hsl(0, 0%, 17%);
+  --color-card-secondary: linear-gradient(145deg, #1e2024, #23272b);
+  --color-card-secondary-alt: hsl(220, 9%, 13%);
+
+  --color-red: #ff8e80;
+  --color_link: #8c75ff;
+  --color_primary: #03d8c3;
+  --color_testimonials: #5757579f;
+
+  --color_text_primary: hsl(0, 0%, 95%); // For >> p, article, ul, li tags color
+  --color_text_title: hsl(250, 10%, 90%); // For >> h1 - h2 tags color
+  --color_text_secondary: hsl(250, 10%, 80%);
+
+  --color_section_title: #c4cfde;
+  --color_section_title_span: #7ea6dd;
+
+  --svg-path-fill: hsl(240, 3%, 17%);
+  --color-transparent: #ff777781;
+  --color-input: hsl(216, 9%, 11%);
+  --input-inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+  --color-text-input: hsl(0, 0%, 73%);
+  --color-header-shadow: #000000;
+
+  --color_faqitems: hsl(0, 0%, 17%);
+}
+
+p,
+a,
+article,
+ul,
+li,
+span {
+  color: var(--color_text_primary);
+  font-size: $font_size_normal;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+label,
+i {
+  color: var(--color_text_secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: unset;
+  font-weight: 400;
+  color: var(--color_text_title);
+  word-break: break-all;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #6c757d;
+  text-align: left;
+}
+
+/* Here h1 tag Only Used in Hero Header*/
+h1 {
+  font-size: $heading_h1_font_size;
+  color: var(--color_text_primary);
+  @include smallDevice {
+    font-size: 2.4rem;
+  }
+}
+/* Here h1 tag Only Used in Hero Header*/
+
+/* Here h2 tag Only used for Section Tittle*/
+h2 {
+  font-size: $heading_h2_font_size;
+  @include smallDevice {
+    font-size: 1.4rem;
+  }
+}
+/* Here h2 tag Only used for Section Tittle*/
+
+/* Here h3 tag Only used for section inner div*/
+h3 {
+  font-size: $heading_h3_font_size;
+  font-weight: 500;
+  @include smallDevice {
+    font-size: 1.1rem;
+  }
+}
+/* Here h3 tag Only used for section inner div*/
+
+/* Here h4 tag Only used for section inner div -2 */
+h4 {
+  font-size: $heading_h4_font_size;
+}
+/* Here h4 tag Only used for section inner div -2 */

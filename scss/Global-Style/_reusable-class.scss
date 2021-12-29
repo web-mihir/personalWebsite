@@ -1,0 +1,46 @@
+/*========== Resable Class Start ==============*/
+.section_default {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.section_title {
+  @include sectionTitle;
+
+  @include smallDevice {
+    font-size: 1.4rem;
+
+    > span {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.section_sub_title {
+  @include sectionSubTitle;
+}
+
+// Default Squire Button Link Style Start== for a tag
+.squire_link_btn {
+  font-size: 1.5rem;
+  color: $color_light;
+  transition: all 0.5s linear;
+  background-color: $color_dark;
+  box-sizing: border-box;
+  margin: 0 5% 0 0;
+  border-radius: 6px;
+  box-shadow: 0 0 20px 0 #000000;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: $color_red_alt;
+    transform: translateY(-2px);
+    box-shadow: 1px 1px 20px 1px $color_light;
+  }
+}
+// Default Squire Button Link Style Start==
+
+/*============ Resable Class End ==========*/

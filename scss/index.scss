@@ -1,0 +1,42 @@
+
+// Sass partials....
+@import "partials/variables";
+@import "partials/mixin";
+
+// Global Style SCSS
+@import "Global-Style/reset";
+
+@import "Global-Style/scrollEffect";
+
+@import "Global-Style/reusable-class";
+
+@import "Global-Style/modalGlobal";
+
+
+// MAIN HTML STRUCTURE START..........
+@import "Components/Body";
+
+@import "Components/HeaderSection";
+
+@import "Components/HeroSection";
+
+@import "Components/AboutSection";
+
+@import "Components/SkillsSection";
+
+@import "Components/ServiceSection";
+
+@import "Components/SubscribeSection";
+
+@import "Components/PortfolioSection";
+
+@import "Components/PortfolioModal";
+
+@import "Components/TestimonialsSection";
+
+@import "Components/FaqSection";
+
+@import "Components/ContactSection";
+
+@import "Components/FooterSection";
+// MAIN HTML STRUCTURE END..........

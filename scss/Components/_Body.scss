@@ -1,0 +1,35 @@
+body {
+  margin: 0 auto;
+  font-family: $primary_font_family;
+  font-weight: 400;
+  width: 100%;
+  background-color: var(--color-body);
+
+  .full-body {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+// Scroll Bar Style Start...
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color_aqua;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $color_primary_two;
+  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+// Scroll Bar Style End

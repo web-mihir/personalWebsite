@@ -1,0 +1,45 @@
+/*======== All Scrolling Effect Start... ========*/
+.fadeOpacity {
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+.fadeOpacity.scrolled {
+  opacity: 1;
+}
+.slideRight {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(50%);
+}
+.slideRight.scrolled {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.slideLeft {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateX(-50%);
+}
+.slideLeft.scrolled {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.slideTop {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  transform: translateY(-20%);
+}
+.slideTop.scrolled {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.slideBottom {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  transform: translateY(20%);
+}
+.slideBottom.scrolled {
+  opacity: 1;
+  transform: translateY(0%);
+}
+/*======== All Scrolling Effect End... ========*/

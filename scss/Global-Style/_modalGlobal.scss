@@ -1,0 +1,59 @@
+.modal__box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: var(--color-body);
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.modal__box.active {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.modal__box_inner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.modal_close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 2%;
+  top: 7%;
+  z-index: 111111;
+  font-size: 2rem;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: $color_light;
+  border: 4px solid $color_hotpink;
+  color: $color_dark;
+  cursor: pointer;
+  transition: all 0.4s linear;
+
+  &:hover {
+    background-color: $color_dark;
+    color: $color_light;
+  }
+}
+
+.modal__box_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 0;
+  height: 90vh;
+  overflow: auto;
+  outline: none;
+}

@@ -1,0 +1,119 @@
+/*========= testimonials Section Start =========*/
+#testimonials__section {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials__body {
+  width: 100%;
+}
+
+.testimonials__slider {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+  background-color: var(--color_testimonials);
+  border-radius: 5px;
+  position: relative;
+
+  > .testimonialsNextBtn,
+  .testimonialsPrevBtn {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.6s linear;
+    color: var(--color_text_primary);
+
+    &:hover {
+      color: $color_hotpink;
+    }
+  }
+
+  > .testimonialsNextBtn {
+    top: 50%;
+    right: 0%;
+    transform: translate(50%, -50%);
+  }
+
+  > .testimonialsPrevBtn {
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.testimonials__slide {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonials__slide.active {
+  display: flex;
+  width: 100%;
+  animation: slide 1s ease;
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+
+.testimonials__person_photo {
+  @include display_flex_center;
+  > img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 4px;
+  }
+}
+
+.testimonials__person_info {
+  @include display_flex_center;
+  flex-direction: column;
+
+  p {
+    text-align: justify;
+    > i {
+      font-size: 2rem;
+      margin: 0 10px;
+    }
+  }
+
+  > i {
+    margin-top: 20px;
+    text-align: right;
+  }
+}
+
+.testimonials__section_indicator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+
+  .slideIndicator {
+    width: 20px;
+    height: 12px;
+    border-radius: 3rem;
+    background-color: var(--color_text_primary);
+    margin: 0 0.5rem;
+    transition: all 0.4s linear;
+    cursor: pointer;
+    &.active {
+      transform: scale(1.4);
+      background-color: var(--color_primary);
+    }
+  }
+}
+
+/***** testimonials Section End ******/

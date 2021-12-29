@@ -1,0 +1,170 @@
+/*======== About Us Start ========*/
+#about__section {
+  transform: translateY(-1px);
+  position: relative;
+  > svg {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: auto;
+    z-index: -1;
+    path {
+      fill: var(--svg-path-fill);
+    }
+  }
+}
+
+.about__section_container {
+  .container {
+    position: relative;
+  }
+}
+
+.about__photo {
+  @include contentpadding_Y;
+  @include display_flex_center;
+  > img {
+    width: 100%;
+    height: auto;
+    transition: all 0.6s linear;
+  }
+}
+
+.about__describe {
+  @include contentpadding_Y;
+  @include display_flex_center;
+  flex-direction: column;
+}
+
+.about__describe_text {
+  > p {
+    text-align: justify;
+    transition: all 0.6s ease-in-out;
+    margin-bottom: 20px;
+    &:hover {
+      transform: translateY(-3px);
+    }
+    > b {
+      color: var(--color_primary);
+      font-size: large;
+    }
+  }
+}
+
+.about__describe_text_countdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about__describe_text_countdown_items {
+  text-align: center;
+  > span {
+    display: block;
+    &:nth-child(1) {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.about__describe__cv {
+  margin-top: 2rem;
+  align-self: flex-start;
+  > a {
+    background-color: var(--color_link);
+    color: $color_light;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    &:hover {
+      background-color: $color_hotpink;
+    }
+    > i {
+      margin-right: 10px;
+    }
+  }
+}
+
+.about__describe_scroll {
+  @include display_flex_center;
+  position: relative;
+  padding-top: 8%;
+  flex-direction: column;
+  > a {
+    color: $color_hotpink;
+    cursor: pointer;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    animation: topDown 3s infinite;
+
+    @keyframes topDown {
+      from {
+        transform: translateY(-10px);
+      }
+      to {
+        transform: translateY(10px);
+      }
+    }
+  }
+}
+
+.about__describe_scroll_box {
+  position: relative;
+  transform: translateY(10px);
+  width: 100%;
+  @include display_flex_center;
+  flex-direction: column;
+}
+
+.about__describe_scroll_box_line {
+  border-right: 2px dashed var(--color_text_primary);
+  height: 2rem;
+  width: 0px;
+}
+
+.about__describe_scroll_box_arrow {
+  width: 30px;
+  height: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    top: 10%;
+    left: 14%;
+    background-color: $color_hotpink;
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    top: 10%;
+    right: 16%;
+    background-color: $color_hotpink;
+    transform: rotate(135deg);
+  }
+}
+
+/* media query for about section start...*/
+@include smallDevice {
+  .about__describe_text {
+    > p {
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+
+  .about__describe__cv {
+    align-self: center;
+  }
+}
+/* media query for about section end... */
+/*======== About Us End ========*/

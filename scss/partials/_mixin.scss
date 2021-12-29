@@ -1,0 +1,115 @@
+// font shortHand property >>> font-style font-weight font-size/line-height font-family;
+// background shorthand property >>> bg-color url() bg-repeat bg-position/bg-size
+// padding shorthand property >> padding-top padding-left padding-bottom padding-right
+// margin shorthand property >> margin-top margin-left margin-bottom margin-right
+
+// section title like h1 tag..
+
+@mixin sectionTitle {
+  font: normal 600 2.2rem $font_oswald;
+  text-align: center;
+  padding: 0 0 0.563rem 0;
+  margin-bottom: 0.6rem;
+  letter-spacing: 1px;
+  position: relative;
+  color: var(--color_section_title);
+
+  > span {
+    font: normal 600 2.2rem $font_oswald;
+    color: var(--color_section_title_span);
+    position: relative;
+    text-decoration: underline;
+    text-underline-position: under;
+
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   width: 100%;
+    //   height: 3px;
+    //   background-color: $color_primary_two;
+    //   bottom: 0;
+    //   right: 50%;
+    //   border-radius: 3rem;
+    //   transform: translate(50%, -50%);
+    // }
+  }
+
+  
+}
+
+// section sub title like span tag...
+@mixin sectionSubTitle {
+  // color: var(--color_text_title);
+  color: var(--color_primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font: normal 600 $font_size_normal $font_didact_gothic;
+  text-transform: capitalize;
+  display: block;
+}
+
+// All section top and bottom padding...
+@mixin sectionPadding {
+  padding: 6rem 0 4rem 0;
+}
+
+// default display flex property...
+@mixin display_flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Content top and bottom padding like row child...
+@mixin contentpadding_Y {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+// content left and right padding...
+@mixin contentpadding_X {
+  padding: 0 2rem 0 2rem;
+}
+
+//heading padding...
+@mixin headingPadding_Y {
+  padding: 2rem 0 1rem 0;
+}
+
+// Media Point...............
+//for small device
+@mixin smallDevice {
+  @media only screen and (max-width: 575.98px) {
+    @content;
+  }
+}
+
+//for media device like tablet..
+@mixin mediamDevice {
+  @media only screen and (max-width: 768px) {
+    //767.98px
+    @content;
+  }
+}
+
+//for small to mediam  device..(BreakPoint)
+@mixin smallToMediam_device {
+  @media only screen and (min-width: 575.99px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+//for mediam to large device...(BreakPoint)
+@mixin mediamToLarge_device {
+  @media only screen and (min-width: 767.98px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+// for small to large device...(BreakPoint)
+@mixin smallToLarge_device {
+  @media only screen and (min-width: 575.98px) and (max-width: 991.98px) {
+    @content;
+  }
+}

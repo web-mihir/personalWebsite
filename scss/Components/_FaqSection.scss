@@ -1,0 +1,138 @@
+/*=====Faq Section Start=====*/
+// .faq_up_svg {
+//   // background: linear-gradient(90deg, #2e15ff, #8986b7, #00adff);
+//   background: linear-gradient(90deg, teal, #217689);
+
+//   path {
+//     // fill: #c4d5ff;
+//     background-color: hsl(223, 100%, 88%);
+//   }
+// }
+// .faq_down_svg {
+//   // background-color: #c4d5ff;
+//   background-color: hsl(223, 100%, 88%);
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   path {
+//     fill: var(--color-body);
+//   }
+// }
+
+#faq__section {
+  // background: #c4d5ff;
+  overflow: hidden;
+  position: relative;
+  // .container {
+  //   > h2 {
+  //     color: $color_dark;
+
+  //     &::before {
+  //       display: none;
+  //     }
+  //   }
+  // }
+}
+
+.faq__photo {
+  @include contentpadding_Y;
+  @include display_flex_center;
+  > img {
+    width: 90%;
+    height: 100%;
+  }
+}
+
+.faq__content {
+  @include contentpadding_Y;
+}
+
+.faq__accordion {
+  @include display_flex_center;
+  flex-direction: column;
+}
+
+.faq__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 3%;
+}
+
+.faq__tabs {
+  user-select: none;
+  margin: 0;
+  position: relative;
+  padding: 0.938rem 1.875rem;
+  width: 100%;
+  // color: $color_dark;
+  display: block;
+  font-weight: 500;
+  background-color: var(--color_faqitems);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15),
+    0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  span {
+    display: block;
+    position: absolute;
+    height: 0.875rem;
+    width: 0.875rem;
+    right: 3%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--color_text_primary);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      transform: translateY(-50%) rotate(90deg);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+// faq active class for faq Tabs...
+.faq__items.active .faq__tabs {
+  color: var(--color_text_secondary);
+  box-shadow: none;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+
+  span {
+    &::after {
+      transform: translateY(-50%) rotate(0deg);
+    }
+  }
+}
+
+.faq__data {
+  width: 100%;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+
+  > article {
+    font-size: $font_size_small;
+    color: var(--color_text_title);
+  }
+}
+// faq active class for faq DATA....
+.faq__items.active .faq__data {
+  padding: 0.938rem 0.625rem 0.625rem 0.625rem;
+  opacity: 1;
+  height: max-content;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--color_faqitems);
+  padding: 0.938rem 1.875rem;
+}
+
+/*==== Faq Section End ====*/
